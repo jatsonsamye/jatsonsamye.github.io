@@ -1,9 +1,41 @@
 {
 	"docs": [
 		{
+			"title": "皈依証",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/guiyi.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2d1aXlpLnBkZiIsImlhdCI6MTY1NTY0MDc4NywiZXhwIjoxOTcxMDAwNzg3fQ.UoLX6gS6WcX7CvHuHhkKofip7lWFPh_nngvW-n82_MY",
+			"page_offset": 3,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			},
+			"bookmarks": [
+				{
+					"title": "子音母音",
+					"page": 20
+				},
+				{
+					"title": "百字明",
+					"page": 22
+				},
+				{
+					"title": "皈依發心",
+					"page": 23
+				},
+				{
+					"title": "飲食前供養文",
+					"page": 34
+				},
+				{
+					"title": "普賢王如來祈願文",
+					"page": 37
+				}
+			]
+		},
+		{
 			"title": "共修法本",
 			"description": "",
-			"keywords": "共修法本",
 			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/gongxiu.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2dvbmd4aXUucGRmIiwiaWF0IjoxNjU1NTY5MzgwLCJleHAiOjE5NzA5MjkzODB9.YVP7z5E3M3RgFdP0HRId5A_Q2L2qIbwEnrF4mmXVHBE",
 			"page_offset": 5,
 			"layout": {
@@ -13,7 +45,7 @@
 			},
 			"bookmarks": [
 				{
-					"title": "八聖吉祥祈禱文",
+					"title": "八聖吉祥祈禱文(八吉祥)",
 					"page": 1
 				},
 				{
@@ -29,7 +61,7 @@
 					"page": 25
 				},
 				{
-					"title": "求生淨土祈願文(極樂原文)",
+					"title": "求生淨土祈願文(極樂願文)",
 					"page": 86
 				},
 				{
@@ -39,22 +71,117 @@
 			]
 		},
 		{
-			"title": "廖義大手印",
+			"title": "了義大手印祈請文",
 			"description": "",
-			"keywords": "廖義大手印",
 			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/liaoyi.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2xpYW95aS5wZGYiLCJpYXQiOjE2NTU1NjkzODQsImV4cCI6MTk3MDkyOTM4NH0.ODL3Tw0dE5Tui7MhitA2ubr57HI9_sWXgnfJqa97r_s",
 			"page_offset": 0,
 			"layout": {
 				"cols": 1,
 				"rows": 2,
 				"clip": [0.15, 0.2, 0.15, 0.2]
+			}
+		},
+		{
+			"title": "除障祈願念誦集",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/chuzhang.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2NodXpoYW5nLnBkZiIsImlhdCI6MTY1NTYzNTU0MiwiZXhwIjoxOTcwOTk1NTQyfQ.Nyu-Zp1abnyBv-kQOZkueVJvtItIUy97e_A7bDh0p6w",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			}
+		},
+		{
+			"title": "嘉春寧波所作願文",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/jiachunqiyuan.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2ppYWNodW5xaXl1YW4ucGRmIiwiaWF0IjoxNjU1NjM1ODA2LCJleHAiOjE5NzA5OTU4MDZ9.uGTwoTqmZdAZFmuzOnYP3NcbcCXMceAgyQPIqyGrECk",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			}
+		},
+		{
+			"title": "普巴金剛禮讚文",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/puba.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3B1YmEucGRmIiwiaWF0IjoxNjU1NjM2NTE5LCJleHAiOjE5NzA5OTY1MTl9.1_fhyNMrYRHt-vlRiK5h3Xd5SYTBkY_fsDvPLXd4Nos",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 2,
+				"clip": [0, 0, 0, 0]
+			}
+		},
+		{
+			"title": "普賢行願王經",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/puxian.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3B1eGlhbi5wZGYiLCJpYXQiOjE2NTU2MzY2NTIsImV4cCI6MTk3MDk5NjY1Mn0.VZ4wuc6XQ5n1vADLlwsDuQh2CWw0GudqQ5hGHxAb0vQ",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			}
+		},
+		{
+			"title": "洽美極樂願文",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/qiamei.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3FpYW1laS5wZGYiLCJpYXQiOjE2NTU2MzY2ODMsImV4cCI6MTk3MDk5NjY4M30.wEE1Bo4UFHxCenlx1C8MWf-QYUJY_01jEA7uE9Wb840",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			}
+		},
+		{
+			"title": "祛病消災念誦集",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/qubing.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3F1YmluZy5wZGYiLCJpYXQiOjE2NTU2Mzc5NjAsImV4cCI6MTk3MDk5Nzk2MH0.52e0jtUhTyqz1HTZtN-hvLVW1NC3aBEwjVRchmMAg30&t=2022-06-19T11%3A26%3A00.940Z",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
 			},
 			"bookmarks": [
 				{
-					"title": "廖義大手印",
-					"page": 1
+					"title": "心經回遮法",
+					"page": 3
+				},
+				{
+					"title": "普賢行願品",
+					"page": 15
+				},
+				{
+					"title": "三蘊經(三十五佛懺悔文)",
+					"page": 31
 				}
 			]
+		},
+		{
+			"title": "聖者無量壽智大乘經",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/wuliang.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3d1bGlhbmcucGRmIiwiaWF0IjoxNjU1NjM2NjgwLCJleHAiOjE5NzA5OTY2ODB9.7fqFaYuqRt6O_qnR2mVeWM1WyYaTWb-EvO184PA0pw8&t=2022-06-19T11%3A04%3A40.857Z",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			}
+		},
+		{
+			"title": "永斷輪迴",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/yongduan.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3lvbmdkdWFuLnBkZiIsImlhdCI6MTY1NTYzODA1MSwiZXhwIjoxOTcwOTk4MDUxfQ.jgPBd0WsQV9Qt8pJifHHviRkPlsPXy0z52lHkM_lndE&t=2022-06-19T11%3A27%3A31.947Z",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			}
 		}
 	]
 }
