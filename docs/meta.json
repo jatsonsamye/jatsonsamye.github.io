@@ -1,0 +1,60 @@
+{
+	"docs": [
+		{
+			"title": "共修法本",
+			"description": "",
+			"keywords": "共修法本",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/gongxiu.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2dvbmd4aXUucGRmIiwiaWF0IjoxNjU1NTY5MzgwLCJleHAiOjE5NzA5MjkzODB9.YVP7z5E3M3RgFdP0HRId5A_Q2L2qIbwEnrF4mmXVHBE",
+			"page_offset": 5,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0.07, 0, 0.07, 0]
+			},
+			"bookmarks": [
+				{
+					"title": "八聖吉祥祈禱文",
+					"page": 1
+				},
+				{
+					"title": "蓮師七句祈請文",
+					"page": 5
+				},
+				{
+					"title": "佛行十二誼讚",
+					"page": 18
+				},
+				{
+					"title": "大自在祈請文(懷法)",
+					"page": 25
+				},
+				{
+					"title": "求生淨土祈願文(極樂原文)",
+					"page": 86
+				},
+				{
+					"title": "點燈祈願文",
+					"page": 90
+				}
+			]
+		},
+		{
+			"title": "廖義大手印",
+			"description": "",
+			"keywords": "廖義大手印",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/liaoyi.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2xpYW95aS5wZGYiLCJpYXQiOjE2NTU1NjkzODQsImV4cCI6MTk3MDkyOTM4NH0.ODL3Tw0dE5Tui7MhitA2ubr57HI9_sWXgnfJqa97r_s",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 2,
+				"clip": [0.15, 0.2, 0.15, 0.2]
+			},
+			"bookmarks": [
+				{
+					"title": "廖義大手印",
+					"page": 1
+				}
+			]
+		}
+	]
+}
