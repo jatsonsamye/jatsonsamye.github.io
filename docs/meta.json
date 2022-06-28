@@ -12,8 +12,8 @@
 			},
 			"bookmarks": [
 				{
-					"title": "子音母音",
-					"page": 20
+					"title": "母音子音緣起咒",
+					"page": 17
 				},
 				{
 					"title": "百字明",
@@ -61,6 +61,10 @@
 					"page": 25
 				},
 				{
+					"title": "長壽祈請文",
+					"page": 79
+				},
+				{
 					"title": "求生淨土祈願文(極樂願文)",
 					"page": 86
 				},
@@ -69,6 +73,34 @@
 					"page": 90
 				}
 			]
+		},
+		{
+			"title": "噶舉大祈願",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/gajudaqiyuan.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2dhanVkYXFpeXVhbi5wZGYiLCJpYXQiOjE2NTY0MjM2OTAsImV4cCI6MTk3MTc4MzY5MH0.AM0tj0YLBnlBRLcW4TP1YDj-dkGpMUAy6fUxL-M8CtU&t=2022-06-28T13%3A41%3A30.129Z",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0, 0, 0, 0]
+			},
+			"bookmarks": [
+				{
+					"title": "大乘布薩律儀",
+					"page": 6
+				}
+			]
+		},
+		{
+			"title": "八關齋戒",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/baguanzhaijie.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2JhZ3VhbnpoYWlqaWUucGRmIiwiaWF0IjoxNjU2NDI0MjUxLCJleHAiOjE5NzE3ODQyNTF9.-qHRKqVnU6mecTK57Fi_OV3ooxNuPvlXVN1xH_hJcCw&t=2022-06-28T13%3A50%3A51.232Z",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0, 0, 0, 0]
+			}
 		},
 		{
 			"title": "了義大手印祈請文",

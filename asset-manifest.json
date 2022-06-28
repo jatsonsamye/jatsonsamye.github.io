@@ -43,10 +43,10 @@
   "/icons/icon-512x512.png": "/icons/icon-512x512.png",
   "/logo.png": "/logo.png",
   "/name.png": "/name.png",
+  "/docs/meta.json": "/docs/meta.json",
   "/.DS_Store": "/.DS_Store",
   "/docs/.DS_Store": "/docs/.DS_Store",
   "/icons/.DS_Store": "/icons/.DS_Store",
-  "/docs/meta.json": "/docs/meta.json",
   "/pro_icon.svg": "/pro_icon.svg",
   "/CNAME": "/CNAME"
 }
