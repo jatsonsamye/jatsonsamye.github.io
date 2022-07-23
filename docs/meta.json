@@ -351,6 +351,27 @@
 					"page": 70
 				}
 			]
+		},
+		{
+			"title": "图片",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/pics.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3BpY3MucGRmIiwiaWF0IjoxNjU4NTYzNjEyLCJleHAiOjE5NzM5MjM2MTJ9.u_D5UIOEvqpwWMu-JiXTOg26_jFXA1iyyzYhEEFZAzo",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0, 0, 0, 0]
+			},
+			"bookmarks": [
+				{
+					"title": "白度母唐卡",
+					"page": 1
+				},
+				{
+					"title": "簡式薈供",
+					"page": 2
+				}
+			]
 		}
 	]
 }
