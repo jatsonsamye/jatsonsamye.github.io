@@ -298,7 +298,7 @@
 			"layout": {
 				"cols": 1,
 				"rows": 2,
-				"clip": [0, 0, 0, 0]
+				"clip": [0.08, 0.1, 0.02, 0.08]
 			}
 		},
 		{
@@ -309,7 +309,7 @@
 			"layout": {
 				"cols": 1,
 				"rows": 2,
-				"clip": [0, 0, 0, 0]
+				"clip": [0.08, 0.1, 0.02, 0.08]
 			}
 		},
 		{
@@ -320,8 +320,37 @@
 			"layout": {
 				"cols": 1,
 				"rows": 2,
-				"clip": [0, 0, 0, 0]
+				"clip": [0.08, 0.1, 0.02, 0.08]
 			}
+		},
+		{
+			"title": "如意輪儀軌解說",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/ruyilun.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL3J1eWlsdW4ucGRmIiwiaWF0IjoxNjU4NTU3NzU2LCJleHAiOjE5NzM5MTc3NTZ9.OHBFXFzzgfpuXNwTfJWcTQELvrtztvl9djjCMwAQneQ",
+			"page_offset": 4,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0, 0, 0, 0]
+			},
+			"bookmarks": [
+				{
+					"title": "白度母唐卡",
+					"page": 17
+				},
+				{
+					"title": "白度母無量宮",
+					"page": 46
+				},
+				{
+					"title": "當字和烏巴拉花",
+					"page": 48
+				},
+				{
+					"title": "五方佛唐卡",
+					"page": 70
+				}
+			]
 		}
 	]
 }
