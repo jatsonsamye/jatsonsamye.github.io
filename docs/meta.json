@@ -272,6 +272,56 @@
 				"rows": 1,
 				"clip": [0, 0, 0, 0]
 			}
+		},
+		{
+			"title": "度母曼達二資糧心要儀軌",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/dumumanda.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2R1bXVtYW5kYS5wZGYiLCJpYXQiOjE2NTg1NTA2NzYsImV4cCI6MTk3MzkxMDY3Nn0.X_3bTVrsCa45sxvk5Egbkhq4hWc_-XeU_kubAiZHDaQ",
+			"page_offset": 1,
+			"layout": {
+				"cols": 1,
+				"rows": 1,
+				"clip": [0, 0, 0, 0]
+			},
+			"bookmarks": [
+				{
+					"title": "白度母回向",
+					"page": 56
+				}
+			]
+		},
+		{
+			"title": "白度母傳承祈請文",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/baidumu_chuancheng.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2JhaWR1bXVfY2h1YW5jaGVuZy5wZGYiLCJpYXQiOjE2NTg1NTAzODEsImV4cCI6MTk3MzkxMDM4MX0.HOPAJf7LPR43w6Z4Nx1ptG6VJi3v4qwEGjHYvzaNmmY",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 2,
+				"clip": [0, 0, 0, 0]
+			}
+		},
+		{
+			"title": "白度母長軌",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/baidumu_long.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2JhaWR1bXVfbG9uZy5wZGYiLCJpYXQiOjE2NTg1NTA0MDQsImV4cCI6MTk3MzkxMDQwNH0.NQ9vfz3iarOi9TK8H5hVcUefaTgE4UwhhXuIQGgHiyE",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 2,
+				"clip": [0, 0, 0, 0]
+			}
+		},
+		{
+			"title": "白度母短軌",
+			"description": "",
+			"file": "https://idsxguhzghaijwyjusdx.supabase.co/storage/v1/object/sign/docs/baidumu_short.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2NzL2JhaWR1bXVfc2hvcnQucGRmIiwiaWF0IjoxNjU4NTUwNDU5LCJleHAiOjE5NzM5MTA0NTl9.7fqm-XzgSweQE9U3eywPV6R0YTdIXLKrYSYjCUBrfYw",
+			"page_offset": 0,
+			"layout": {
+				"cols": 1,
+				"rows": 2,
+				"clip": [0, 0, 0, 0]
+			}
 		}
 	]
 }
