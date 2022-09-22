@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Happy Birthday, Minnie</title>
     <meta name="description" content="Happy Birthday, Minnie">
@@ -21,9 +22,9 @@
 
       function create () {
           window.addEventListener('resize', resize);
-          setTimeout(function() {
-            resize();
-          },0);
+          resize()
+
+          // setTimeout(resize, 100);
       }
 
       function resize() {
@@ -32,6 +33,8 @@
 
             var width = window.innerWidth, height = window.innerHeight;
             var wratio = width / height, ratio = canvas.width / canvas.height;
+            
+            console.log("resize", width, height)
 
             if (wratio < ratio) {
                 canvas.style.width = width + "px";
