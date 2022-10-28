@@ -223,32 +223,35 @@
 					val = getline()
 				}
 				console.log("Searching", val.replace(" ", ""))
+				const isCN = val.match(/[\u4e00-\u9FFF]/)
 
-				if (_.size(val) > 0) {
-					$("#output").html(`<p>${val}</p>`)
-					const isTB = val.match(/[\u0f00-\u0fff]/)
-					_.forEach(data, row => {
-						const candidate = isTB? row.tb: row.cn
-						const len = Math.max(_.size(candidate), _.size(val))
-						row.dist =  (len - lev(candidate, val)) / len
-					})
+				if (isCN) {
+					if (_.size(val) > 0) {
+						$("#output").html(`<p>${val}</p>`)
+						
+						_.forEach(data, row => {
+							const candidate = row.cn
+							const len = Math.max(_.size(candidate), _.size(val))
+							row.dist =  (len - lev(candidate, val)) / len
+						})
 
-					gridOptions.api.setRowData(_.sortBy(_.filter(data, row => row.dist > 0.1), row => -row.dist))
+						gridOptions.api.setRowData(_.sortBy(_.filter(data, row => row.dist > 0.1), row => -row.dist))
 
 
-					$.ajax({
-					    type: "POST",
-					    url: transurl,
-					    data: { q: val, target: "en", key: google_apikey },
-					    success: function(data) {
-					    	$("#output").html(`<p>${val}</p>
-					    		<p>${_.get(_.first(data.data.translations), "translatedText")}</p>`)
-					    	
-					    }
-					})
-				}
-				else {
-					gridOptions.api.setRowData(data)	
+						$.ajax({
+						    type: "POST",
+						    url: transurl,
+						    data: { q: val, target: "en", key: google_apikey },
+						    success: function(data) {
+						    	$("#output").html(`<p>${val}</p>
+						    		<p>${_.get(_.first(data.data.translations), "translatedText")}</p>`)
+						    	
+						    }
+						})
+					}
+					else {
+						gridOptions.api.setRowData(data)	
+					}
 				}
 			}
 
