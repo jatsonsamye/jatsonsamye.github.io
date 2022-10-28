@@ -6,7 +6,7 @@
 	<title>Translator</title>
 	<style> 
 	textarea {
-	  width: 100%;
+	  width: 60%;
 	  height: 400px;
 	  padding: 12px 20px;
 	  box-sizing: border-box;
@@ -15,6 +15,14 @@
 	  background-color: #f8f8f8;
 	  font-size: 16px;
 	  resize: none;
+	}
+
+	#output {
+	  box-sizing: border-box;
+	  border: 2px solid #ccc;
+	  border-radius: 4px;
+	  background-color: #f8f8f8;
+	  font-size: 16px;
 	}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -52,133 +60,130 @@
 </head>
 <body>
 	<textarea id="txt" placeholder="輸入中文或藏文"></textarea>
+	<div style="width: 38%;float: right;padding: 5px;">
+		<button id="save">保存到雲端</button>
+		<div id="output" style="width:100%;margin-top: 10px;height: 350px;"></div>
+	</div>
 	<div id="grid" style="width: 100%;height: calc(100vh - 420px);" class="ag-theme-balham"></div>
 	<ul class='custom-menu'>
 	  <li data-action="trans">翻譯</li>
 	  <li data-action="save">存儲到雲端</li>
 	</ul>
 	<script type="text/javascript">
-		  function _min(d0, d1, d2, bx, ay)
-		  {
-		    return d0 < d1 || d2 < d1
-		        ? d0 > d2
-		            ? d2 + 1
-		            : d0 + 1
-		        : bx === ay
-		            ? d1
-		            : d1 + 1;
-		  }
-
-		  function lev(a, b)
-		  {
-		    if (a === b) {
-		      return 0;
-		    }
-
-		    if (a.length > b.length) {
-		      var tmp = a;
-		      a = b;
-		      b = tmp;
-		    }
-
-		    var la = a.length;
-		    var lb = b.length;
-
-		    while (la > 0 && (a.charCodeAt(la - 1) === b.charCodeAt(lb - 1))) {
-		      la--;
-		      lb--;
-		    }
-
-		    var offset = 0;
-
-		    while (offset < la && (a.charCodeAt(offset) === b.charCodeAt(offset))) {
-		      offset++;
-		    }
-
-		    la -= offset;
-		    lb -= offset;
-
-		    if (la === 0 || lb < 3) {
-		      return lb;
-		    }
-
-		    var x = 0;
-		    var y;
-		    var d0;
-		    var d1;
-		    var d2;
-		    var d3;
-		    var dd;
-		    var dy;
-		    var ay;
-		    var bx0;
-		    var bx1;
-		    var bx2;
-		    var bx3;
-
-		    var vector = [];
-
-		    for (y = 0; y < la; y++) {
-		      vector.push(y + 1);
-		      vector.push(a.charCodeAt(offset + y));
-		    }
-
-		    var len = vector.length - 1;
-
-		    for (; x < lb - 3;) {
-		      bx0 = b.charCodeAt(offset + (d0 = x));
-		      bx1 = b.charCodeAt(offset + (d1 = x + 1));
-		      bx2 = b.charCodeAt(offset + (d2 = x + 2));
-		      bx3 = b.charCodeAt(offset + (d3 = x + 3));
-		      dd = (x += 4);
-		      for (y = 0; y < len; y += 2) {
-		        dy = vector[y];
-		        ay = vector[y + 1];
-		        d0 = _min(dy, d0, d1, bx0, ay);
-		        d1 = _min(d0, d1, d2, bx1, ay);
-		        d2 = _min(d1, d2, d3, bx2, ay);
-		        dd = _min(d2, d3, dd, bx3, ay);
-		        vector[y] = dd;
-		        d3 = d2;
-		        d2 = d1;
-		        d1 = d0;
-		        d0 = dy;
-		      }
-		    }
-
-		    for (; x < lb;) {
-		      bx0 = b.charCodeAt(offset + (d0 = x));
-		      dd = ++x;
-		      for (y = 0; y < len; y += 2) {
-		        dy = vector[y];
-		        vector[y] = dd = _min(dy, d0, dd, bx0, vector[y + 1]);
-		        d0 = dy;
-		      }
-		    }
-
-		    return dd;
-		  }
-
-
-		function getSelectionText() {
-		  var text = "";
-		  var activeEl = document.getElementById("txt");
-		  var activeElTagName = activeEl ? activeEl.tagName.toLowerCase() : null;
-		  if (
-		    (activeElTagName == "textarea" || activeElTagName == "input") &&
-		    /^(?:text|search|password|tel|url)$/i.test(activeEl.type) &&
-		    (typeof activeEl.selectionStart == "number")
-		  ) {
-		    text = activeEl.value.slice(activeEl.selectionStart, activeEl.selectionEnd);
-		  } else if (window.getSelection) {
-		    text = window.getSelection().toString();
-		  }
-		  return text;
+		function _min(d0, d1, d2, bx, ay)
+		{
+			return d0 < d1 || d2 < d1
+			    ? d0 > d2
+			        ? d2 + 1
+			        : d0 + 1
+			    : bx === ay
+			        ? d1
+			        : d1 + 1;
 		}
 
-		let selection = null
+		function lev(a, b)
+		{
+			if (a === b) {
+			  return 0;
+			}
+
+			if (a.length > b.length) {
+			  var tmp = a;
+			  a = b;
+			  b = tmp;
+			}
+
+			var la = a.length;
+			var lb = b.length;
+
+			while (la > 0 && (a.charCodeAt(la - 1) === b.charCodeAt(lb - 1))) {
+			  la--;
+			  lb--;
+			}
+
+			var offset = 0;
+
+			while (offset < la && (a.charCodeAt(offset) === b.charCodeAt(offset))) {
+			  offset++;
+			}
+
+			la -= offset;
+			lb -= offset;
+
+			if (la === 0 || lb < 3) {
+			  return lb;
+			}
+
+			var x = 0;
+			var y;
+			var d0;
+			var d1;
+			var d2;
+			var d3;
+			var dd;
+			var dy;
+			var ay;
+			var bx0;
+			var bx1;
+			var bx2;
+			var bx3;
+
+			var vector = [];
+
+			for (y = 0; y < la; y++) {
+			  vector.push(y + 1);
+			  vector.push(a.charCodeAt(offset + y));
+			}
+
+			var len = vector.length - 1;
+
+			for (; x < lb - 3;) {
+			  bx0 = b.charCodeAt(offset + (d0 = x));
+			  bx1 = b.charCodeAt(offset + (d1 = x + 1));
+			  bx2 = b.charCodeAt(offset + (d2 = x + 2));
+			  bx3 = b.charCodeAt(offset + (d3 = x + 3));
+			  dd = (x += 4);
+			  for (y = 0; y < len; y += 2) {
+			    dy = vector[y];
+			    ay = vector[y + 1];
+			    d0 = _min(dy, d0, d1, bx0, ay);
+			    d1 = _min(d0, d1, d2, bx1, ay);
+			    d2 = _min(d1, d2, d3, bx2, ay);
+			    dd = _min(d2, d3, dd, bx3, ay);
+			    vector[y] = dd;
+			    d3 = d2;
+			    d2 = d1;
+			    d1 = d0;
+			    d0 = dy;
+			  }
+			}
+
+			for (; x < lb;) {
+			  bx0 = b.charCodeAt(offset + (d0 = x));
+			  dd = ++x;
+			  for (y = 0; y < len; y += 2) {
+			    dy = vector[y];
+			    vector[y] = dd = _min(dy, d0, dd, bx0, vector[y + 1]);
+			    d0 = dy;
+			  }
+			}
+
+			return dd;
+		}
+
+		let prevStart = null
+		let google_apikey = "AIzaSyDzVmjo_hV-Fv57_qHiuiPdQw6hvltt60Y"
+
+		const getline = () => {
+			const val = $("#txt").val()
+			const txt = document.getElementById("txt")
+
+		    let rowNumber = val.substr(0, txt.selectionStart).split("\n").length; //2
+		    return val.split("\n")[rowNumber-1]
+		}
 
 		let jsonbin = "https://api.jsonbin.io/v3/b/635aad000e6a79321e36625d"
+		let transurl = `https://translation.googleapis.com/language/translate/v2?key=${google_apikey}`
 
 		$.ajax({
 		    beforeSend: function(req) {
@@ -194,10 +199,10 @@
 
 		$.getJSON("trans.json").then(data => {
 			const columnDefs = [
-				{ field: "dist", headerName: "相似度", width: 70, valueFormatter: params => ((params.value || 0) * 100).toFixed(0) },
-				{ field: "tb", headerName: "藏文", width: 300, filter: "agTextColumnFilter" },
+				{ field: "dist", headerName: "相似度", width: 60, valueFormatter: params => ((params.value || 0) * 100).toFixed(0) },
 				{ field: "cn", headerName: "中文", width: 300, filter: "agTextColumnFilter" },
-				{ field: "en", headerName: "英文", width: 900, filter: "agTextColumnFilter" },
+				{ field: "en", headerName: "英文", width: 1000, filter: "agTextColumnFilter" },
+				{ field: "tb", headerName: "藏文", width: 100, filter: "agTextColumnFilter" },
 			]
 
 			const gridOptions = {
@@ -210,67 +215,130 @@
 			  rowData: data
 			}
 
-			$("#txt").bind("contextmenu", (event) => {
-			 	event.preventDefault()
-			 	selection = window.getSelection().toString()
-			 	$(".custom-menu").finish().toggle(100).
-				  css({
-				    top: event.pageY + "px",
-				    left: event.pageX + "px"
-				  })
-			})
-
-			$(document).bind("mousedown", function(e) {
-			  // If the clicked element is not the menu
-			  if (!$(e.target).parents(".custom-menu").length > 0) {
-
-			    // Hide it
-			    $(".custom-menu").hide(100);
-			  }
-			})
-
-
-			$(".custom-menu li").click(function() {
-				if ($(this).attr("data-action") == "trans") {
-					const val = selection
-					console.log("Searching", val.replace(" ", ""))
-
-					if (_.size(val) > 0) {
-						const isTB = val.match(/[\u0f00-\u0fff]/)
-						_.forEach(data, row => {
-							const candidate = isTB? row.tb: row.cn
-							const len = Math.max(_.size(candidate), _.size(val))
-							row.dist =  (len - lev(candidate, val)) / len
-						})
-
-						gridOptions.api.setRowData(_.sortBy(_.filter(data, row => row.dist > 0.1), row => -row.dist))
-					}
-					else {
-						gridOptions.api.setRowData(data)	
-					}
+			const ontranslate = event => {
+				let val = window.getSelection().toString()
+				if (_.size(val) == 0) {
+					if (prevStart == txt.selectionStart) return
+					prevStart = txt.selectionStart
+					val = getline()
 				}
-				else {
+				console.log("Searching", val.replace(" ", ""))
+
+				if (_.size(val) > 0) {
+					$("#output").html(`<p>${val}</p>`)
+					const isTB = val.match(/[\u0f00-\u0fff]/)
+					_.forEach(data, row => {
+						const candidate = isTB? row.tb: row.cn
+						const len = Math.max(_.size(candidate), _.size(val))
+						row.dist =  (len - lev(candidate, val)) / len
+					})
+
+					gridOptions.api.setRowData(_.sortBy(_.filter(data, row => row.dist > 0.1), row => -row.dist))
+
+
 					$.ajax({
-					    beforeSend: function(req) {
-							req.setRequestHeader("Content-Type", "application/json");
-							req.setRequestHeader("X-Master-Key", "$2b$10$gvvWoPhn31i2/uLR/czTj.qd3GJJmslznB20NkyOg8xTKIJRdXjZC");
-					    },
-					    type: "PUT",
-					    dataType: "json",
-					    url: jsonbin,
-					    data: JSON.stringify({ doc: $("#txt").val() }),
+					    type: "POST",
+					    url: transurl,
+					    data: { q: val, target: "en", key: google_apikey },
 					    success: function(data) {
-					        console.log(data)
-					        alert("已經保存到雲端")
+					    	$("#output").html(`<p>${val}</p>
+					    		<p>${_.get(_.first(data.data.translations), "translatedText")}</p>`)
+					    	
 					    }
 					})
 				}
+				else {
+					gridOptions.api.setRowData(data)	
+				}
+			}
 
-				$(".custom-menu").hide(100);
+			$("#txt").bind('keypress', ontranslate); // Every character written
+			$("#txt").bind('mousedown', ontranslate); // Click down
+			$("#txt").bind('touchstart', ontranslate); // Mobile
+			$("#txt").bind('input', ontranslate); // Other input events
+			$("#txt").bind('paste', ontranslate); // Clipboard actions
+			$("#txt").bind('cut', ontranslate);
+			$("#txt").bind('mousemove', ontranslate); // Selection, dragging text
+			$("#txt").bind('select', ontranslate); // Some browsers support this event
+			$("#txt").bind('selectstart', ontranslate); // Some browsers support this event
+
+			$("#save").click(() => {
+				$.ajax({
+				    beforeSend: function(req) {
+						req.setRequestHeader("Content-Type", "application/json");
+						req.setRequestHeader("X-Master-Key", "$2b$10$gvvWoPhn31i2/uLR/czTj.qd3GJJmslznB20NkyOg8xTKIJRdXjZC");
+				    },
+				    type: "PUT",
+				    dataType: "json",
+				    url: jsonbin,
+				    data: JSON.stringify({ doc: $("#txt").val() }),
+				    success: function(data) {
+				        console.log(data)
+				        alert("已經保存到雲端")
+				    }
+				})
 			})
 
-			$("#txt").change(e => {
-			})
+
+			// $("#txt").bind("contextmenu", (event) => {
+			//  	event.preventDefault()
+			//  	selection = window.getSelection().toString()
+			//  	$(".custom-menu").finish().toggle(100).
+			// 	  css({
+			// 	    top: event.pageY + "px",
+			// 	    left: event.pageX + "px"
+			// 	  })
+			// })
+
+			// $(document).bind("mousedown", function(e) {
+			//   // If the clicked element is not the menu
+			//   if (!$(e.target).parents(".custom-menu").length > 0) {
+
+			//     // Hide it
+			//     $(".custom-menu").hide(100);
+			//   }
+			// })
+
+
+			// $(".custom-menu li").click(function() {
+			// 	if ($(this).attr("data-action") == "trans") {
+			// 		const val = selection
+			// 		console.log("Searching", val.replace(" ", ""))
+
+			// 		if (_.size(val) > 0) {
+			// 			$("#output").html(`${val}`)
+			// 			const isTB = val.match(/[\u0f00-\u0fff]/)
+			// 			_.forEach(data, row => {
+			// 				const candidate = isTB? row.tb: row.cn
+			// 				const len = Math.max(_.size(candidate), _.size(val))
+			// 				row.dist =  (len - lev(candidate, val)) / len
+			// 			})
+
+			// 			gridOptions.api.setRowData(_.sortBy(_.filter(data, row => row.dist > 0.1), row => -row.dist))
+			// 		}
+			// 		else {
+			// 			gridOptions.api.setRowData(data)	
+			// 		}
+			// 	}
+			// 	else {
+			// 		$.ajax({
+			// 		    beforeSend: function(req) {
+			// 				req.setRequestHeader("Content-Type", "application/json");
+			// 				req.setRequestHeader("X-Master-Key", "$2b$10$gvvWoPhn31i2/uLR/czTj.qd3GJJmslznB20NkyOg8xTKIJRdXjZC");
+			// 		    },
+			// 		    type: "PUT",
+			// 		    dataType: "json",
+			// 		    url: jsonbin,
+			// 		    data: JSON.stringify({ doc: $("#txt").val() }),
+			// 		    success: function(data) {
+			// 		        console.log(data)
+			// 		        alert("已經保存到雲端")
+			// 		    }
+			// 		})
+			// 	}
+
+			// 	$(".custom-menu").hide(100);
+			// })
 
 	    	const gridDiv = document.querySelector('#grid')
 	    	new agGrid.Grid(gridDiv, gridOptions)
